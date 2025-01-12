@@ -1,0 +1,55 @@
+import React, { useState } from "react";
+import "../assets/styles/Gallery.scss"; // Ensure you have corresponding styles for the gallery
+
+// Array of images to display in the gallery
+const galleryImages = [
+  { id: 1, src: "/assets/images/roel.jpg", alt: "Image 1" },
+  { id: 2, src: "/assets/images/roel.jpg", alt: "Image 2" },
+  { id: 3, src: "/assets/images/roel.jpg", alt: "Image 3" },
+  { id: 4, src: "/assets/images/roel.jpg", alt: "Image 4" },
+  { id: 5, src: "/assets/images/roel.jpg", alt: "Image 5" },
+  { id: 6, src: "/assets/images/roel.jpg", alt: "Image 6" },
+];
+
+function Gallery() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const openModal = (imageSrc: string) => {
+    setSelectedImage(imageSrc);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
+  return (
+    <div className="gallery-container" id="gallery">
+      <h2 className="gallery-title">Gallery</h2>
+      <div className="gallery-grid">
+        {galleryImages.map((image) => (
+          <div
+            key={image.id}
+            className="gallery-item"
+            onClick={() => openModal(image.src)}
+          >
+            <img src={image.src} alt={image.alt} className="gallery-thumbnail" />
+          </div>
+        ))}
+      </div>
+
+      {/* Modal View */}
+      {selectedImage && (
+        <div className="gallery-modal" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img src={selectedImage} alt="Selected" className="modal-image" />
+            <button className="modal-close" onClick={closeModal}>
+              &times;
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default Gallery;

@@ -1,0 +1,82 @@
+.expertise-container {
+    padding: 5% 10%;
+    background: linear-gradient(135deg, #000, #292929);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+  
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #ffc107;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+  
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+  
+    .card {
+      background: #1c1c1c;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      }
+  
+      .icon {
+        color: #ffc107;
+        margin-bottom: 1rem;
+        transition: color 0.3s ease;
+  
+        &:hover {
+          color: #e0a800;
+        }
+      }
+  
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #ffc107;
+      }
+  
+      p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        color: #ccc;
+      }
+  
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+  
+        .chip-title {
+          font-weight: bold;
+          margin-right: 0.5rem;
+          color: #ffc107;
+        }
+  
+        .chip {
+          background-color: #fff;
+          color: #000;
+          font-size: 0.85rem;
+          border-radius: 5px;
+          padding: 0.2rem 0.5rem;
+          transition: background-color 0.3s ease, color 0.3s ease;
+  
+          &:hover {
+            background-color: #ffc107;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+  

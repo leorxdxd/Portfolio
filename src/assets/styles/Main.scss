@@ -1,0 +1,156 @@
+.portfolio-container {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+
+  .portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ffc107;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+
+      li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 500;
+
+        &:hover {
+          color: #ffc107;
+        }
+      }
+    }
+  }
+
+  .main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; /* Reduced gap */
+    padding: 4rem 2rem;
+
+    &.compact {
+      flex-direction: row;
+      gap: 1.5rem; /* Narrower gap */
+    }
+
+    .text-content {
+      max-width: 45%; /* Ensures text does not dominate */
+      text-align: left;
+
+      .greeting {
+        color: #ffc107;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .name {
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 0.5rem 0;
+
+        .highlight {
+          color: #ffc107;
+        }
+      }
+
+      .profession {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: 1rem;
+
+        .btn {
+          text-decoration: none;
+          padding: 0.7rem 1.2rem;
+          border-radius: 5px;
+          font-size: 1rem;
+          font-weight: 500;
+
+          &.hire-me {
+            background-color: #ffc107;
+            color: #000;
+
+            &:hover {
+              background-color: #e0a800;
+            }
+          }
+
+          &.my-works {
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #ffc107;
+
+            &:hover {
+              background-color: #ffc107;
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+
+    .image-content {
+      .profile-picture {
+        max-width: 100%; /* Ensure the image scales properly */
+        height: auto;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+        /* Removed border-radius to avoid shaping the image */
+      }
+    }
+  }
+}
+
+.animated-profession {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 4s steps(20, end) infinite, blink 1s step-end infinite;
+  border-right: 3px solid var(--primary-color);
+
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
+  }
+
+  @keyframes blink {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: var(--primary-color);
+    }
+  }
+}
+.profile-picture {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s ease-in-out; /* Smooth transition effect */
+}
