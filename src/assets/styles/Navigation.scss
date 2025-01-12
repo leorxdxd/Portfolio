@@ -1,0 +1,103 @@
+/* navigation.scss */
+
+/* General Styles */
+.navigation-bar {
+    background-color: #121212;
+    padding: 0 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar-fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: none;
+  
+    &.scrolled {
+      background-color: #1e1e1e;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .navigation-bar button {
+    font-size: 1rem;
+    text-transform: none;
+    font-weight: 500;
+    margin-right: 15px;
+  
+    &:hover {
+      color: #90caf9;
+      background-color: transparent;
+    }
+  }
+  
+  /* Highlight Contact Button */
+  .highlight-contact {
+    color: #ffd700 !important; /* Gold color */
+    font-weight: bold;
+    border: 2px solid #ffd700;
+    border-radius: 4px;
+    padding: 5px 10px;
+  
+    &:hover {
+      background-color: #ffd700;
+      color: #121212;
+    }
+  }
+  
+  /* Responsive Drawer */
+  .navigation-bar-responsive {
+    background-color: #1e1e1e;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    .mobile-menu-top {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      color: #90caf9;
+      display: flex;
+      align-items: center;
+      svg {
+        margin-right: 5px;
+      }
+    }
+  
+    .MuiDivider-root {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  
+    .MuiListItemButton-root {
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  
+    .MuiListItemText-root {
+      text-align: center;
+      span {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
+  
+    .highlight-contact {
+      color: #ffd700 !important; /* Gold color for mobile */
+      font-weight: bold;
+      border: 2px solid #ffd700;
+      border-radius: 4px;
+      padding: 10px;
+  
+      &:hover {
+        background-color: #ffd700;
+        color: #121212;
+      }
+    }
+  }
+  
