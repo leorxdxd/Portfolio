@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import "../assets/styles/Gallery.scss"; // Ensure you have corresponding styles for the gallery
+import "../assets/styles/Gallery.scss";
 
-// Array of images to display in the gallery
 const galleryImages = [
-  { id: 1, src: "/assets/images/roel.jpg", alt: "Image 1" },
-  { id: 2, src: "/assets/images/roel.jpg", alt: "Image 2" },
-  { id: 3, src: "/assets/images/roel.jpg", alt: "Image 3" },
-  { id: 4, src: "/assets/images/roel.jpg", alt: "Image 4" },
-  { id: 5, src: "/assets/images/roel.jpg", alt: "Image 5" },
-  { id: 6, src: "/assets/images/roel.jpg", alt: "Image 6" },
+  { id: 1, src: require("../assets/images/roel.png"), alt: "Image 1" },
+  { id: 2, src: require("../assets/images/roel.png"), alt: "Image 2" },
+  { id: 3, src: require("../assets/images/roel.png"), alt: "Image 3" },
+  { id: 4, src: require("../assets/images/roel.png"), alt: "Image 4" },
+  { id: 5, src: require("../assets/images/roel.png"), alt: "Image 5" },
+  { id: 6, src: require("../assets/images/roel.png"), alt: "Image 6" },
 ];
 
 function Gallery() {
@@ -37,7 +36,6 @@ function Gallery() {
         ))}
       </div>
 
-      {/* Modal View */}
       {selectedImage && (
         <div className="gallery-modal" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
