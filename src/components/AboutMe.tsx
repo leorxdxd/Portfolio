@@ -19,7 +19,7 @@ const AboutMe = () => {
         </div>
 
         <div className="about-me-text">
-          <h3>Hello! I'm [Your Name]</h3>
+          <h3>Hello! I'm Roel Delos Reyes</h3>
           <p>
             I am a passionate and creative individual with a strong background in
             technology and design. My goal is to bridge the gap between
@@ -47,8 +47,8 @@ const AboutMe = () => {
             <ul>
               <li>🎮 Gaming</li>
               <li>📚 Reading Tech Blogs</li>
-              <li>🌱 Gardening</li>
-              <li>✈️ Traveling</li>
+              <li>🌱 Watching Movies</li>
+              <li>✈️ Coding</li>
             </ul>
           </div>
         </div>
