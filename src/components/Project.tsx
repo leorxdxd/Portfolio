@@ -5,21 +5,27 @@ import "../assets/styles/Project.scss";
 const projects = [
   {
     id: 1,
-    title: "Filmate AI",
+    title: "Technical Ticketing System",
     description:
-      "Developed a movie finder app with semantic search and sentiment analysis using OpenAI GPT-3.5 Turbo, Qdrant, React, and Flask.",
-    image: require("../assets/images/mock10.png"),
-    liveLink: "https://www.filmate.club/",
-    githubLink: "https://github.com/your-repo/filmate-ai",
+      "Developed a robust technical ticketing system to categorize and resolve IT concerns effectively. Integrated AI capabilities for ticket classification and prioritization.",
+    image: require("../assets/images/mock11.png"),
+    githubLink: "https://github.com/leorxdxd/technical-ticketing-system",
   },
   {
     id: 2,
-    title: "High Speed Chase",
+    title: "AI Plagiarism Checker",
     description:
-      "Designed, developed, and launched a 3D multiplayer racing game with C# and Unity. Available on Itch.io.",
-    image: require("../assets/images/mock09.png"),
-    liveLink: "https://yujisatojr.itch.io/highspeedchase",
-    githubLink: "https://github.com/your-repo/high-speed-chase",
+      "Created an AI-powered plagiarism detection system to analyze and compare text content for originality. Utilized advanced machine learning models for accurate analysis.",
+    image: require("../assets/images/mock12.png"),
+    githubLink: "https://github.com/leorxdxd/ai-plagiarism-checker",
+  },
+  {
+    id: 3,
+    title: "MiroMail",
+    description:
+      "Developed MiroMail, a user-friendly email composer integrated with Gmail, enabling seamless email composition and editing with a sleek, Canva-like interface.",
+    image: require("../assets/images/mock13.png"),
+    githubLink: "https://github.com/leorxdxd/MiroMail",
   },
   // Add more project data objects here...
 ];
@@ -31,26 +37,18 @@ function Project() {
       <div className="projects-grid">
         {projects.map((project) => (
           <div key={project.id} className="project">
-            <a href={project.liveLink} target="_blank" rel="noreferrer">
+            <a href={project.githubLink} target="_blank" rel="noreferrer">
               <img
                 src={project.image}
                 className="zoom project-image"
                 alt={project.title}
               />
             </a>
-            <a href={project.liveLink} target="_blank" rel="noreferrer">
+            <a href={project.githubLink} target="_blank" rel="noreferrer">
               <h2 className="project-title">{project.title}</h2>
             </a>
             <p className="project-description">{project.description}</p>
             <div className="project-links">
-              <a
-                href={project.liveLink}
-                className="project-btn"
-                target="_blank"
-                rel="noreferrer"
-              >
-                View Live
-              </a>
               <a
                 href={project.githubLink}
                 className="project-btn github-link"
