@@ -25,9 +25,9 @@ function Timeline() {
           iconStyle={{ background: '#6A4EFD', color: '#fff' }}
           icon={<FontAwesomeIcon icon={faBriefcase} />}
         >
-          <h3 className="vertical-timeline-element-title">Technology Consultant</h3>
-          <h4 className="vertical-timeline-element-subtitle">Dallas, TX</h4>
-          <p>Full-stack Web Development, GenAI/LLM, Project Management, Business Development</p>
+          <h3 className="vertical-timeline-element-title">Student Assistant | Office Trainee</h3>
+          <h4 className="vertical-timeline-element-subtitle">SISFU | Lima, Las Pinas City</h4>
+          <p>MIS | Technical Assistant, Canva Designer, Email Manager, Website Designer</p>
         </VerticalTimelineElement>
 
         {/* Full Stack Engineer */}
@@ -41,13 +41,13 @@ function Timeline() {
             borderRadius: '12px',
           }}
           contentArrowStyle={{ borderRight: '7px solid #242424' }}
-          date="2020 - 2022"
+          date="2022 - 2022"
           iconStyle={{ background: '#6A4EFD', color: '#fff' }}
           icon={<FontAwesomeIcon icon={faBriefcase} />}
         >
-          <h3 className="vertical-timeline-element-title">Full Stack Engineer</h3>
-          <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
-          <p>Frontend Development, Backend Development, User Experience, Team Leading</p>
+          <h3 className="vertical-timeline-element-title">Production Operator</h3>
+          <h4 className="vertical-timeline-element-subtitle">Epson Philippines | Malvar Batangas</h4>
+          <p>Machine Operation, Maintaining Machines, Quality Control</p>
         </VerticalTimelineElement>
 
         {/* Staff Engineer Intern */}
@@ -61,13 +61,13 @@ function Timeline() {
             borderRadius: '12px',
           }}
           contentArrowStyle={{ borderRight: '7px solid #242424' }}
-          date="2021 - 2021"
+          date="2021 - 2022"
           iconStyle={{ background: '#6A4EFD', color: '#fff' }}
           icon={<FontAwesomeIcon icon={faBriefcase} />}
         >
-          <h3 className="vertical-timeline-element-title">Staff Engineer Intern</h3>
-          <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
-          <p>Full-stack Development, API Development, User Experience</p>
+          <h3 className="vertical-timeline-element-title">SHS Intern</h3>
+          <h4 className="vertical-timeline-element-subtitle">Clamp Op Toolings and Fabrication | Carmona, Cavite</h4>
+          <p>Quality Control, Operate Production Equipment, Assembling Products</p>
         </VerticalTimelineElement>
 
         {/* Data Analyst Intern */}
@@ -81,13 +81,13 @@ function Timeline() {
             borderRadius: '12px',
           }}
           contentArrowStyle={{ borderRight: '7px solid #242424' }}
-          date="2020 - 2020"
+          date="2021 - 2021"
           iconStyle={{ background: '#6A4EFD', color: '#fff' }}
           icon={<FontAwesomeIcon icon={faBriefcase} />}
         >
-          <h3 className="vertical-timeline-element-title">Data Analyst Intern</h3>
-          <h4 className="vertical-timeline-element-subtitle">Tokyo, Japan</h4>
-          <p>Automation, Data Governance, Statistical Analysis</p>
+          <h3 className="vertical-timeline-element-title">Intern</h3>
+          <h4 className="vertical-timeline-element-subtitle">SOM | Cavite</h4>
+          <p>Cleaning of Machines, Making Bolts and Nuts, Metal products</p>
         </VerticalTimelineElement>
       </VerticalTimeline>
     </div>
