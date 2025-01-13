@@ -1,237 +1,130 @@
 .about-me-container {
-    background: linear-gradient(135deg, #111, #222);
-    color: #fff;
-    padding: 4rem 2rem;
-    font-family: 'Poppins', sans-serif;
-    overflow: hidden;
-  
-    // Header Section
-    .about-me-header {
-      text-align: center;
-      margin-bottom: 3rem;
-  
-      h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: #000; // Black background
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+
+  .about-me-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    gap: 2rem;
+
+    .about-me-image {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .profile-picture {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #ffc107;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        animation: fadeIn 1s ease-in-out;
+      }
+    }
+
+    .about-me-text {
+      flex: 2 1 500px;
+
+      h1 {
         font-size: 3rem;
         color: #ffc107;
         margin-bottom: 0.5rem;
-        position: relative;
-        animation: fadeInDown 1.2s ease;
-  
-        &::after {
-          content: "";
-          display: block;
-          width: 60px;
-          height: 4px;
-          background-color: #ffc107;
-          margin: 0.5rem auto 0;
-          animation: scaleIn 1.2s ease;
-        }
+        animation: fadeInDown 1s ease-in-out;
       }
-  
-      p {
-        font-size: 1.3rem;
+
+      .pronunciation {
+        font-style: italic;
         color: #ccc;
+        margin-bottom: 1.5rem;
+        animation: fadeIn 1.2s ease-in-out;
+      }
+
+      p {
+        font-size: 1.2rem;
         line-height: 1.8;
-        max-width: 700px;
-        margin: 0 auto;
-        animation: fadeIn 1.5s ease;
+        color: #ddd;
+        margin-bottom: 1rem;
+        animation: fadeIn 1.4s ease-in-out;
       }
-    }
-  
-    // Content Section
-    .about-me-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 4rem;
-  
-      // Profile Image
-      .about-me-image {
-        flex: 1 1 300px;
+
+      .social-links {
+        margin-top: 1.5rem;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        animation: zoomIn 1.5s ease;
-  
-        .profile-picture {
-          max-width: 100%;
-          border-radius: 50%;
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-          &:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
-          }
-        }
-      }
-  
-      // About Text
-      .about-me-text {
-        flex: 1 1 500px;
-  
-        h3 {
-          font-size: 2.4rem;
-          color: #ffc107;
-          margin-bottom: 1rem;
-          animation: fadeInLeft 1s ease;
-        }
-  
-        p {
-          font-size: 1.2rem;
-          line-height: 1.8;
-          color: #ddd;
-          margin-bottom: 1.5rem;
-          animation: fadeIn 1.2s ease;
-  
-          &:nth-child(2) {
-            animation-delay: 0.5s;
-          }
-        }
-  
-        .skills,
-        .hobbies {
-          margin-top: 2rem;
-  
-          h4 {
-            font-size: 1.8rem;
-            color: #ffc107;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1.2s ease;
-          }
-  
-          ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-  
-            li {
-              background: #333;
-              padding: 0.8rem 1.4rem;
-              border-radius: 5px;
-              color: #fff;
-              font-size: 1rem;
-              box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-              transition: background 0.3s ease, box-shadow 0.3s ease;
-              animation: fadeInUp 1s ease;
-  
-              &:hover {
-                background: #444;
-                box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
-              }
-            }
-          }
-        }
-      }
-    }
-  
-    // Responsive Design
-    @media (max-width: 768px) {
-      .about-me-content {
-        flex-direction: column;
-        align-items: center;
-  
-        .about-me-text {
-          text-align: center;
-  
-          .skills ul,
-          .hobbies ul {
-            justify-content: center;
-          }
-        }
-      }
-    }
-  
-    @media (max-width: 480px) {
-      .about-me-header {
-        h2 {
-          font-size: 2.4rem;
-        }
-  
-        p {
-          font-size: 1.1rem;
-        }
-      }
-  
-      .about-me-text {
-        h3 {
+        gap: 1rem;
+
+        a {
           font-size: 2rem;
-        }
-  
-        p {
-          font-size: 1rem;
-        }
-  
-        .skills ul li,
-        .hobbies ul li {
-          font-size: 0.9rem;
+          color: #fff;
+          transition: color 0.3s ease, transform 0.3s ease;
+
+          &:hover {
+            color: #ffc107;
+            transform: scale(1.1);
+          }
+
+          i {
+            display: inline-block;
+          }
         }
       }
     }
   }
-  
-  // Animations
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .about-me-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .about-me-image {
+      .profile-picture {
+        width: 200px;
+        height: 200px;
+      }
     }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+
+    .about-me-text {
+      p {
+        font-size: 1rem;
+      }
     }
   }
-  
-  @keyframes fadeInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+}
+
+@media (max-width: 480px) {
+  .about-me-text h1 {
+    font-size: 2.5rem;
   }
-  
-  @keyframes scaleIn {
-    from {
-      transform: scaleX(0);
-    }
-    to {
-      transform: scaleX(1);
-    }
+}
+
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  @keyframes zoomIn {
-    from {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+  to {
+    opacity: 1;
   }
-  
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
