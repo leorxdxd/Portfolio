@@ -27,8 +27,9 @@ function App() {
         <Main />
         <AboutMe />
         <Expertise />
-        <Timeline />
         <Project />
+        <Timeline />
+        
         <Gallery /> 
         <Achievements />
         <Testimonials />{/* Add Gallery section here */}
