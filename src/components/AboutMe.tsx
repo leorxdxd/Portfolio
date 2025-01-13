@@ -1,55 +1,53 @@
-import React from "react"; // Import React to make this a module
+import React from "react";
 import "../assets/styles/AboutMe.scss";
 
 const AboutMe = () => {
   return (
     <section className="about-me-container">
-      <div className="about-me-header">
-        <h2>About Me</h2>
-        <p>Discover who I am and what drives my passion for technology and creativity.</p>
-      </div>
-
       <div className="about-me-content">
+        {/* Image Section */}
         <div className="about-me-image">
           <img
-            src={require("../assets/images/1.jpg")} // Adjust to match the actual filename
+            src={require("../assets/images/1.jpg")} // Adjust path if necessary
             alt="Your Portrait"
             className="profile-picture"
           />
         </div>
 
+        {/* Text Section */}
         <div className="about-me-text">
-          <h3>Hello! I'm Roel Delos Reyes</h3>
+          <h1>About Me</h1>
+          <p className="pronunciation">/ahFOO-ah dEb-ruh/</p>
           <p>
-            I am a passionate and creative individual with a strong background in
-            technology and design. My goal is to bridge the gap between
-            functionality and aesthetics, creating solutions that are both effective
-            and visually stunning.
+            Hello World! I'm Roel Delos Reyes, a Front-End Web Developer based
+            out of Metro Manila. I love combining the worlds of logic and
+            creative design to make eye-catching, accessible, and user-friendly
+            websites and applications.
           </p>
           <p>
-            When I'm not coding or designing, I enjoy exploring new ideas,
-            engaging in collaborative projects, and continuously learning to stay
-            ahead in the fast-paced world of technology.
+            Technology leads, society follows. The move toward increasing
+            inclusivity and diversity in the industry through representation is
+            of importance to me.
+          </p>
+          <p>
+            I'm excited to make the leap and continue refining my skills with
+            the right company. Drop me a line or check out my profiles below:
           </p>
 
-          <div className="skills">
-            <h4>Skills:</h4>
-            <ul>
-              <li>💻 Full-stack Web Development</li>
-              <li>🎨 UI/UX Design</li>
-              <li>⚙️ Problem Solving & Debugging</li>
-              <li>🌐 Cloud Integration</li>
-            </ul>
-          </div>
-
-          <div className="hobbies">
-            <h4>Hobbies:</h4>
-            <ul>
-              <li>🎮 Gaming</li>
-              <li>📚 Reading Tech Blogs</li>
-              <li>🌱 Watching Movies</li>
-              <li>✈️ Coding</li>
-            </ul>
+          {/* Social Links */}
+          <div className="social-links">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="https://medium.com" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-medium"></i>
+            </a>
           </div>
         </div>
       </div>
