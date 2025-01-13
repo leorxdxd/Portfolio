@@ -17,7 +17,7 @@ const AboutMe = () => {
         {/* Text Section */}
         <div className="about-me-text">
           <h1>About Me</h1>
-          <p className="pronunciation">/ahFOO-ah dEb-ruh/</p>
+          <p className="pronunciation">/roh-EL DEH-los REH-yes/</p>
           <p>
             Hello World! I'm Roel Delos Reyes, a Front-End Web Developer based
             out of Metro Manila. I love combining the worlds of logic and
