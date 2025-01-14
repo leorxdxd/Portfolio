@@ -8,9 +8,9 @@ export default defineStackbitConfig({
         {
             name: "filesystem",
             type: "filesystem",
-            path: "./content"
+            path: "./src/content"
         }
     ],
     postInstallCommand: "npm i --no-save @stackbit/types",
-    devCommand: "npm run dev"
+    devCommand: "npm start"
 });
