@@ -1,0 +1,131 @@
+// Variables
+$gold: #ffd700;
+$dark-gold: #c5a600;
+$black: #121212;
+$white: #ffffff;
+$gray: #f5f5f5;
+$transition: all 0.3s ease;
+
+// Contact Container
+.contact-container {
+  padding: 100px 20px;
+  background-color: $black;
+  color: $white;
+  text-align: center;
+
+  .contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: $gold;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: $gold;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      color: rgba($white, 0.9);
+    }
+
+    // Contact Info
+    .contact-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 40px;
+
+      .contact-icon {
+        font-size: 24px;
+        color: $gold;
+        margin-right: 10px;
+      }
+
+      .contact-link {
+        font-size: 20px;
+        color: $white;
+        text-decoration: none;
+        transition: $transition;
+
+        &:hover {
+          color: $gold;
+        }
+      }
+    }
+
+    // Social Links
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      .social-link {
+        color: $white;
+        text-decoration: none;
+        transition: $transition;
+
+        .social-icon {
+          font-size: 32px;
+          transition: $transition;
+        }
+
+        &:hover {
+          color: $gold;
+          transform: translateY(-5px);
+
+          .social-icon {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 50px 20px;
+
+    .contact-content {
+      h1 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .contact-info {
+        .contact-icon {
+          font-size: 20px;
+        }
+
+        .contact-link {
+          font-size: 18px;
+        }
+      }
+
+      .social-links {
+        .social-icon {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,142 @@
+// Variables
+$gold: #ffd700;
+$dark-gold: #c5a600;
+$black: #121212;
+$white: #ffffff;
+$gray: #f5f5f5;
+$transition: all 0.3s ease;
+
+// Testimonials Container
+.testimonials-container {
+  padding: 100px 20px;
+  background-color: $black;
+  color: $white;
+  text-align: center;
+
+  .section-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: $gold;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background-color: $gold;
+    }
+  }
+
+  .testimonials-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .testimonial-item {
+      background-color: rgba($white, 0.05);
+      border-radius: 10px;
+      padding: 30px;
+      transition: $transition;
+      animation: fadeInUp 1s ease-in-out;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0 20px rgba($gold, 0.5);
+      }
+
+      .testimonial-feedback {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: rgba($white, 0.9);
+        position: relative;
+
+        &::before {
+          content: '“';
+          font-size: 48px;
+          color: $gold;
+          position: absolute;
+          top: -20px;
+          left: -10px;
+        }
+
+        &::after {
+          content: '”';
+          font-size: 48px;
+          color: $gold;
+          position: absolute;
+          bottom: -40px;
+          right: -10px;
+        }
+      }
+
+      .testimonial-author {
+        font-size: 16px;
+        font-weight: 500;
+        color: $gold;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .testimonials-container {
+    padding: 50px 20px;
+
+    .section-title {
+      font-size: 28px;
+    }
+
+    .testimonials-list {
+      grid-template-columns: 1fr;
+
+      .testimonial-item {
+        padding: 20px;
+
+        .testimonial-feedback {
+          font-size: 16px;
+
+          &::before,
+          &::after {
+            font-size: 36px;
+          }
+        }
+
+        .testimonial-author {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
